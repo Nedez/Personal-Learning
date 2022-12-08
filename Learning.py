@@ -22,11 +22,25 @@ DF
 # .loc selects and retrieves specific rows and column in a DataFrame
 DF.loc[['row 2', 'row 5'], ['column 5', 'column 2']]
 
-# %%
+# %% Data Slicing
 """ Data Slicing uses index values to select and return 
 a slice of several values from a dataset. It will return
 the values between two index points seperated by ":" """ 
 
 Series_obj['row 3': 'row 7']
 
+# %% Comparing Scalars
+#compares value with a condition and returns true or false
+DF>.2
+
+
+# %% Filtering with Scalars
+# Filters by returning only values that satisfies condition
+Series_obj[Series_obj > 6]
+DF[DF>.2]
+
+# %% Setting Values with Scalars
+# Here certain values are selected with in the Series_obj and replaced with 8
+Series_obj['row 1', 'row 5', 'row 8'] = 8
+Series_obj
 # %%
